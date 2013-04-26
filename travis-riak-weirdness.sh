@@ -20,3 +20,7 @@ curl 'http://localhost:8098/buckets/mybucket/index/field1_bin/val1'; echo ""
 curl 'http://127.0.0.1:8098/riak/mybucket/foo%3Abaz'; echo ""
 curl 'http://127.0.0.1:8098/riak/mybucket/foo:baz'; echo ""
 curl 'http://localhost:8098/buckets/mybucket/index/field1_bin/val2'; echo ""
+
+echo -e "\nConfig:\n"
+
+cat /usr/local/riak/etc/app.config
