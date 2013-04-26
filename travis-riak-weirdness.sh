@@ -23,4 +23,4 @@ curl 'http://localhost:8098/buckets/mybucket/index/field1_bin/val2'; echo ""
 
 echo -e "\nConfig:\n"
 
-find / -name 'app.config'
+cat /etc/riak/app.config
