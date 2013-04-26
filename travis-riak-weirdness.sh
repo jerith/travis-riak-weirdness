@@ -3,6 +3,13 @@
 echo -e "Running the following script:\n"
 cat $0
 
+echo -e "\nFixing Riak config:\n"
+
+sudo riak stop
+sudo sed -i.bak 's/{vnode_vclocks, true}/{http_url_encoding, on}, {vnode_vclocks, true}' /etc/riak/app.config
+sudo riak start
+sleep 5
+
 echo -e "\nResults:\n"
 
 curl -XPUT -d 'data1' \
