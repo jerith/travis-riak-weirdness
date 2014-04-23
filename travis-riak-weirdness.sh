@@ -1,7 +1,10 @@
 #!/bin/bash
 
+echo "vvvvv"
 which node
+echo "^^^^^"
 
+exit 0
 echo -e "Running the following script:\n"
 cat $0
 
