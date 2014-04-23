@@ -1,5 +1,7 @@
 #!/bin/bash
 
+which node
+
 echo -e "Running the following script:\n"
 cat $0
 
