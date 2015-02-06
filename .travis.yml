@@ -7,6 +7,7 @@ before_install:
   - "curl http://apt.basho.com/gpg/basho.apt.key | sudo apt-key add -"
   - sudo bash -c "echo deb http://apt.basho.com $(lsb_release -sc) main > /etc/apt/sources.list.d/basho.list"
   - sudo apt-get update
+  - sudo apt-cache show riak
   - sudo apt-get install -q riak=1.4.12
 
 script: ./travis-riak-weirdness.sh
