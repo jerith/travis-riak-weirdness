@@ -4,7 +4,7 @@ python:
 
 before_install:
   # We need Riak 1.4, so we add Basho's repo and install from there.
-  - sudo riak stop
+  - sudo riak stop || true
   - "curl http://apt.basho.com/gpg/basho.apt.key | sudo apt-key add -"
   - sudo bash -c "echo deb http://apt.basho.com $(lsb_release -sc) main > /etc/apt/sources.list.d/basho.list"
   - sudo apt-get -qq update
