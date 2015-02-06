@@ -12,7 +12,7 @@ cat $0
 # sudo riak stop
 # # sudo sed -i.bak 's/{vnode_vclocks, true}/{http_url_encoding, on}, {vnode_vclocks, true}/' /etc/riak/app.config
 # sudo riak start
-# sleep 5
+sleep 5
 
 sudo riak-admin status
 
