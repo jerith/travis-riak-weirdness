@@ -9,9 +9,8 @@ before_install:
   - sudo bash -c "echo deb http://apt.basho.com $(lsb_release -sc) main > /etc/apt/sources.list.d/basho.list"
   - sudo apt-get -qq update
   - sudo apt-get install -q -y --force-yes riak=1.4.12-1
-  - sudo rm -rf /var/lib/riak/*
-  - sudo sed -i.bak 's/{storage_backend, riak_kv_bitcask_backend}/{storage_backend, riak_kv_eleveldb_backend}/' /etc/riak/app.config
-  - sudo sed -i.bak 's/{enabled, false}$/{enabled, true}/' /etc/riak/app.config
+  # - sudo rm -rf /var/lib/riak/*
+  - sudo cp app.config /etc/riak/app.config
   - sudo service riak start
 
 script: ./travis-riak-weirdness.sh
