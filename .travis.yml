@@ -4,12 +4,12 @@ python:
 
 before_install:
   # We need Riak 1.4, so we add Basho's repo and install from there.
-  - sudo riak stop || true
+  - sudo service riak stop
   - "curl http://apt.basho.com/gpg/basho.apt.key | sudo apt-key add -"
   - sudo bash -c "echo deb http://apt.basho.com $(lsb_release -sc) main > /etc/apt/sources.list.d/basho.list"
   - sudo apt-get -qq update
   - sudo apt-get install -q -y --force-yes riak=1.4.12-1
   - sudo rm -rf /var/lib/riak/*
-  - sudo riak start
+  - sudo service riak start
 
 script: ./travis-riak-weirdness.sh

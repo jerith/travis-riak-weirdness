@@ -14,6 +14,7 @@ cat $0
 # sudo riak start
 sleep 5
 
+sudo riak-admin ring-status
 sudo riak-admin status
 
 echo -e "\nResults:\n"
