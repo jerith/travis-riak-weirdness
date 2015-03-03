@@ -5,7 +5,7 @@ which node
 echo "^^^^^"
 
 echo "vvvvv"
-find / -name 'riak'
+find / -name 'console.log'
 echo "^^^^^"
 
 echo -e "Running the following script:\n"
