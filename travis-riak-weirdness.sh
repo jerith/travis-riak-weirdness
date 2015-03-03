@@ -5,7 +5,7 @@ which node
 echo "^^^^^"
 
 echo "vvvvv"
-find / -name 'console.log'
+sudo find / -name 'console.log'
 echo "^^^^^"
 
 echo -e "Running the following script:\n"
@@ -50,4 +50,4 @@ echo -e "\nadvanced.config:\n"
 cat /etc/riak/advanced.config
 
 echo -e "\nconsole.log\n"
-cat /var/log/riak/console.log
+cat /usr/lib/riak/log/console.log
