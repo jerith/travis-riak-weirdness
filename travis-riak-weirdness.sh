@@ -44,3 +44,6 @@ cat /etc/riak/riak.conf
 
 echo -e "\nadvanced.config:\n"
 cat /etc/riak/advanced.config
+
+echo -e "\nconsole.log\n"
+cat /var/log/riak/console.log
