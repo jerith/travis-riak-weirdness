@@ -4,6 +4,10 @@ echo "vvvvv"
 which node
 echo "^^^^^"
 
+echo "vvvvv"
+find / -name 'riak'
+echo "^^^^^"
+
 echo -e "Running the following script:\n"
 cat $0
 
