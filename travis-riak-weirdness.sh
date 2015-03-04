@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 echo "vvvvv"
 which node
@@ -13,11 +13,13 @@ ls -l /etc/default/
 cat /etc/default/riak
 echo "^^^^^"
 
-echo -e "Running the following script:\n"
-cat $0
+# echo -e "Running the following script:\n"
+# cat $0
 
 sudo service riak stop
+sleep 10
 sudo service riak start
+sleep 30
 
 # echo -e "\nFixing Riak config:\n"
 
