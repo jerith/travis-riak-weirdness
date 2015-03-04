@@ -16,12 +16,15 @@ echo "^^^^^"
 echo -e "Running the following script:\n"
 cat $0
 
+sudo service riak stop
+sudo service riak start
+
 # echo -e "\nFixing Riak config:\n"
 
 # sudo riak stop
 # # sudo sed -i.bak 's/{vnode_vclocks, true}/{http_url_encoding, on}, {vnode_vclocks, true}/' /etc/riak/app.config
 # sudo riak start
-sleep 30
+# sleep 30
 
 sudo riak version
 sudo riak-admin ring-status
