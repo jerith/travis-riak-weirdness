@@ -18,7 +18,7 @@ ls -l /etc/security/limits.conf
 cat /etc/security/limits.conf
 echo "^^^^^"
 
-echo "ulimit -n 65536" > /etc/default/riak
+sudo echo "ulimit -n 65536" > /etc/default/riak
 
 # echo -e "Running the following script:\n"
 # cat $0
