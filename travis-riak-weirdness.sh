@@ -24,6 +24,14 @@ done
 echo "^^^^^"
 
 echo "vvvvv"
+ls -l /etc/pam.d/
+for f in /etc/pam.d/*; do
+    echo "----- $f -----"
+    cat $f
+done
+echo "^^^^^"
+
+echo "vvvvv"
 sudo sh -c 'echo "ulimit -n 65536; whoami; ulimit -n" > /etc/default/riak'
 ls -l /etc/default/riak
 cat /etc/default/riak
