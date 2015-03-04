@@ -8,6 +8,11 @@ echo "vvvvv"
 sudo find / -name 'console.log'
 echo "^^^^^"
 
+echo "vvvvv"
+ls -l /etc/default/
+cat /etc/default/riak
+echo "^^^^^"
+
 echo -e "Running the following script:\n"
 cat $0
 
