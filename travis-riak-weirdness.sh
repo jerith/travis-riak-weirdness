@@ -9,9 +9,16 @@ sudo find / -name 'console.log'
 echo "^^^^^"
 
 echo "vvvvv"
-ls -l /etc/default/
+ls -l /etc/default/riak
 cat /etc/default/riak
 echo "^^^^^"
+
+echo "vvvvv"
+ls -l /etc/security/limits.conf
+cat /etc/security/limits.conf
+echo "^^^^^"
+
+echo "ulimit -n 65536" > /etc/default/riak
 
 # echo -e "Running the following script:\n"
 # cat $0
