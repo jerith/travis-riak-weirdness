@@ -16,6 +16,11 @@ echo "^^^^^"
 echo "vvvvv"
 ls -l /etc/security/limits.conf
 cat /etc/security/limits.conf
+ls -l /etc/security/limits.d/
+for f in /etc/security/limits.d/*; do
+    echo "----- $f -----"
+    cat $f
+done
 echo "^^^^^"
 
 echo "vvvvv"
