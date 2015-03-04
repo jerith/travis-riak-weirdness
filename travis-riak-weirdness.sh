@@ -19,7 +19,7 @@ cat /etc/security/limits.conf
 echo "^^^^^"
 
 echo "vvvvv"
-sudo sh -c 'echo "ulimit -n 65536" > /etc/default/riak'
+sudo sh -c 'echo "ulimit -n 65536; whoami; ulimit -n" > /etc/default/riak'
 ls -l /etc/default/riak
 cat /etc/default/riak
 echo "^^^^^"
