@@ -1,6 +1,8 @@
 #!/bin/sh -x
 
-curl -O https://raw.github.com/spawngrid/kerl/master/kerl
+ls
+curl -O https://raw.githubusercontent.com/spawngrid/kerl/master/kerl
+ls
 chmod a+x kerl
 
 ./kerl build git git://github.com/basho/otp.git OTP_R16B02_basho8 R16B02-basho8
