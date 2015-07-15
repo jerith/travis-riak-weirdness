@@ -7,6 +7,11 @@ env:
   - RIAK_VERSION="1.4.12"
   - RIAK_VERSION="2.1.1"
 
+addons:
+  apt:
+    packages:
+      - libpam0g-dev
+
 cache:
   directories:
   - $HOME/erlang
