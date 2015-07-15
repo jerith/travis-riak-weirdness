@@ -1,8 +1,9 @@
-#!/bin/sh
+#!/bin/sh -x
+
 curl -O https://raw.github.com/spawngrid/kerl/master/kerl
 chmod a+x kerl
 
-kerl build git git://github.com/basho/otp.git OTP_R16B02_basho8 R16B02-basho8
+./kerl build git git://github.com/basho/otp.git OTP_R16B02_basho8 R16B02-basho8
 
 ls ~/erlang
 
