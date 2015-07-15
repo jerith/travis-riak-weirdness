@@ -9,9 +9,13 @@ if [ ! -d $HOME/erlang/$ERL_BUILD ]; then
     ./kerl build "$@" "$ERL_BUILD" &
     buildpid=$!
 
-    LOGFILE="$HOME/.kerl/builds/$ERL_BUILD/otp_build.log"
+    if [ "$1" = "git" ]; then
+        LOGFILE="$HOME/.kerl/builds/$ERL_BUILD/otp_build.log"
+    else
+        LOGFILE="$HOME/.kerl/builds/$ERL_BUILD/otp_build_$1.log"
+    fi
     while [ ! -e $LOGFILE ]; do
-        sleep 1
+        sleep 10
     done
     tail -f $LOGFILE &
     tailpid=$!
