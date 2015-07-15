@@ -8,7 +8,7 @@ RIAK_CACHE_DIR="$HOME/riak/riak-2.1.1"
 
 # Once-off to kill bad cache.
 rm -rf $RIAK_CACHE_DIR
-if [ ! $RIAK_CACHE_DIR ]; then
+if [ ! -d $RIAK_CACHE_DIR ]; then
     wget http://s3.amazonaws.com/downloads.basho.com/riak/2.1/2.1.1/riak-2.1.1.tar.gz
     tar zxvf riak-2.1.1.tar.gz
     cd riak-2.1.1
