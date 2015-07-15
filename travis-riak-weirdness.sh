@@ -1,49 +1,43 @@
 #!/bin/bash -x
 
-echo "vvvvv"
-which node
-echo "^^^^^"
-
-echo "vvvvv"
-sudo find / -name 'console.log'
-echo "^^^^^"
+find / -name 'console.log'
 
 echo "vvvvv"
 ls -l /etc/default/riak
 cat /etc/default/riak
 echo "^^^^^"
 
-echo "vvvvv"
-ls -l /etc/security/limits.conf
-cat /etc/security/limits.conf
-ls -l /etc/security/limits.d/
-for f in /etc/security/limits.d/*; do
-    echo "----- $f -----"
-    cat $f
-done
-echo "^^^^^"
+# echo "vvvvv"
+# ls -l /etc/security/limits.conf
+# cat /etc/security/limits.conf
+# ls -l /etc/security/limits.d/
+# for f in /etc/security/limits.d/*; do
+#     echo "----- $f -----"
+#     cat $f
+# done
+# echo "^^^^^"
 
-echo "vvvvv"
-ls -l /etc/pam.d/
-for f in /etc/pam.d/*; do
-    echo "----- $f -----"
-    cat $f
-done
-echo "^^^^^"
+# echo "vvvvv"
+# ls -l /etc/pam.d/
+# for f in /etc/pam.d/*; do
+#     echo "----- $f -----"
+#     cat $f
+# done
+# echo "^^^^^"
 
-echo "vvvvv"
-sudo sh -c 'echo "ulimit -n 65536; whoami; ulimit -n" > /etc/default/riak'
-ls -l /etc/default/riak
-cat /etc/default/riak
-echo "^^^^^"
+# echo "vvvvv"
+# sudo sh -c 'echo "ulimit -n 65536; whoami; ulimit -n" > /etc/default/riak'
+# ls -l /etc/default/riak
+# cat /etc/default/riak
+# echo "^^^^^"
 
 # echo -e "Running the following script:\n"
 # cat $0
 
-sudo service riak stop
-sleep 10
-sudo service riak start
-sleep 30
+# sudo service riak stop
+# sleep 10
+# sudo service riak start
+# sleep 30
 
 # echo -e "\nFixing Riak config:\n"
 
@@ -52,9 +46,9 @@ sleep 30
 # sudo riak start
 # sleep 30
 
-sudo riak version
-sudo riak-admin ring-status
-sudo riak-admin status
+riak version
+riak-admin ring-status
+riak-admin status
 
 echo -e "\nResults:\n"
 
