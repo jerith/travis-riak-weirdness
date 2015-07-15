@@ -7,11 +7,9 @@ env:
   - RIAK_VERSION="1.4.12"
   - RIAK_VERSION="2.1.1"
 
-# services:
-#   - riak
-
-# before_install:
-#   - sudo service riak start
+cache:
+  directories:
+  - $HOME/erlang
 
 before_install:
   - ./riak-${RIAK_VERSION}-install.sh

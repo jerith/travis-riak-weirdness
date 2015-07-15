@@ -3,18 +3,24 @@
 curl -O https://raw.githubusercontent.com/spawngrid/kerl/master/kerl
 chmod a+x kerl
 
-./kerl build git git://github.com/basho/otp.git OTP_R16B02_basho8 R16B02-basho8 &
-buildpid=$!
+ERL_BUILD="$1"; shift
 
-LOGFILE="$HOME/.kerl/builds/R16B02-basho8/otp_build.log"
-while [ ! -e $LOGFILE ]; do
-    sleep 1
-done
-tail -f $LOGFILE &
-tailpid=$!
-wait $buildpid
-kill $tailpid
+if [ ! -d $HOME/erlang/$ERL_BUILD ]; then
+    ./kerl build "$@" "$ERL_BUILD" &
+    buildpid=$!
 
-./kerl install R16B02-basho8 ~/erlang/R16B02-basho8
+    LOGFILE="$HOME/.kerl/builds/$ERL_BUILD/otp_build.log"
+    while [ ! -e $LOGFILE ]; do
+        sleep 1
+    done
+    tail -f $LOGFILE &
+    tailpid=$!
+    wait $buildpid
+    kill $tailpid
+
+    ./kerl install "$ERL_BUILD" "$HOME/erlang/$ERL_BUILD"
+else
+    echo "Cached build found, using that."
+fi
 
 ls ~/erlang
