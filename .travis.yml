@@ -3,15 +3,17 @@ language: python
 python:
   - "2.7"
 
-addons:
-  apt:
-    packages:
-      - riak
+env:
+  - RIAK_VERSION="1.4.12"
+  - RIAK_VERSION="2.2.1"
 
 # services:
 #   - riak
 
 # before_install:
 #   - sudo service riak start
+
+before_install:
+  - ./riak-${RIAK_VERSION}-install.sh
 
 script: ./travis-riak-weirdness.sh
