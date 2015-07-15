@@ -7,9 +7,9 @@ ERL_BUILD=r15b01
 if [ ! -d $HOME/riak/riak-1.4.12 ]; then
     wget http://s3.amazonaws.com/downloads.basho.com/riak/1.4/1.4.12/riak-1.4.12.tar.gz
     tar zxvf riak-1.4.12.tar.gz
-    pushd riak-1.4.12
+    cd riak-1.4.12
     make rel
-    popd
+    cd ..
 
     mkdir -p $HOME/riak
     cp -a riak-1.4.12/rel/riak $HOME/riak/riak-1.4.12
