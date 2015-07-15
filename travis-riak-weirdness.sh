@@ -10,7 +10,15 @@
 # sudo service riak start
 # sleep 30
 
+echo "Installed:"
 riak version
+
+echo "Wanted:"
+echo $RIAK_VERSION
+
+echo "Built:"
+$HOME/riak/riak-${RIAK_VERSION}/bin/riak version
+
 # riak-admin ring-status
 # riak-admin status
 

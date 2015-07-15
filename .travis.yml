@@ -14,7 +14,8 @@ addons:
 
 cache:
   directories:
-  - $HOME/erlang
+    - $HOME/erlang
+    - $HOME/riak
 
 before_install:
   - ./riak-${RIAK_VERSION}-install.sh
