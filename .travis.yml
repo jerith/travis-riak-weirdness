@@ -16,6 +16,7 @@ cache:
   directories:
     - $HOME/erlang
     - $HOME/riak
+    - $HOME/download
 
 before_install:
   # - ./riak-${RIAK_VERSION}-install.sh
