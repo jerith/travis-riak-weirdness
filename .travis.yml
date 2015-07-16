@@ -18,6 +18,7 @@ cache:
     - $HOME/riak
 
 before_install:
-  - ./riak-${RIAK_VERSION}-install.sh
+  # - ./riak-${RIAK_VERSION}-install.sh
+  - ./fetch-riak.sh $RIAK_VERSION
 
 script: ./travis-riak-weirdness.sh

@@ -6,8 +6,6 @@ ERL_BUILD=r15b01
 
 RIAK_CACHE_DIR="$HOME/riak/riak-1.4.12"
 
-# Once-off to kill bad cache.
-rm -rf $RIAK_CACHE_DIR
 if [ ! -d $RIAK_CACHE_DIR ]; then
     wget http://s3.amazonaws.com/downloads.basho.com/riak/1.4/1.4.12/riak-1.4.12.tar.gz
     tar zxvf riak-1.4.12.tar.gz

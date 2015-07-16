@@ -10,19 +10,19 @@
 # sudo service riak start
 # sleep 30
 
-echo "Installed:"
+echo "System:"
 riak version
 
 echo "Wanted:"
 echo $RIAK_VERSION
 
-echo "Built:"
+echo "Installed:"
 ./riak/bin/riak version
 ./riak/bin/riak ertspath
 
 ./riak/bin/riak start
 sleep 30
-./riak/bin/riak status
+./riak/bin/riak-admin status
 
 # riak-admin ring-status
 # riak-admin status
