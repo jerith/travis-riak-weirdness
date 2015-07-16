@@ -9,4 +9,4 @@ if [ ! -f $RIAK_DOWNLOAD ]; then
     wget -O $RIAK_DOWNLOAD http://jerith.za.net/files/riak/$RIAK_FILENAME
 fi
 
-tar xzf $RIAK_FILENAME
+tar xzf $RIAK_DOWNLOAD
