@@ -1,11 +1,17 @@
+sudo: false
+
 language: python
 python:
   - "2.7"
-
+  - pypy
 services:
   - riak
 
 # before_install:
 #   - sudo service riak start
+
+before_install:
+  - export PYPY_VERSION="4.0.0"
+  - source source setup-pypy-travis.sh
 
 script: ./travis-riak-weirdness.sh
