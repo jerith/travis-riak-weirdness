@@ -12,6 +12,6 @@ services:
 
 before_install:
   - export PYPY_VERSION="4.0.0"
-  - source source setup-pypy-travis.sh
+  - source setup-pypy-travis.sh
 
 script: ./travis-riak-weirdness.sh
