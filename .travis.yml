@@ -13,5 +13,8 @@ services:
 before_install:
   - export PYPY_VERSION="4.0.0"
   - source setup-pypy-travis.sh
+  - if [ ! -z "$PYPY_VERSION" ]; then python --version 2>&1 | fgrep "PyPy $PYPY_VERSION"; fi
+  - export PYPY_VERSION="4.0.1"
+  - if [ ! -z "$PYPY_VERSION" ]; then python --version 2>&1 | fgrep "PyPy $PYPY_VERSION"; fi
 
 script: ./travis-riak-weirdness.sh
